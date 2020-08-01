@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+        <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'image/main_logo.png' %} " width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            알거지
+            </a>
+        </nav>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'reviewCreate' %} ">
+            글쓰기
+            </a>
+        </nav>
+
+
+        <center><h1>REVIEW</h1></center>
+
+        <br>
+        <br>
+
+        {% for posts in posts %}
+            <div class="card-body">
+                <div class="card" style="width: 50rem; position:relative; left:20%">
+                    <div class="card-body">
+                      <h5 class="card-title">제목 : {{posts.title}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">날짜 : {{posts.date}}</h6>
+                      <p class="card-text">본문 미리보기 : {{posts.reviewSummary}}<a href = "{% url 'reviewDetail' posts.id %}">자세히</a></p>
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+    
+    </body>
+</html>
+

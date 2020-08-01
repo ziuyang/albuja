@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if not blogs %}
+
+        <h1>검색 결과가 없습니다</h1>
+        <form action="{% url 'home' %}">
+            <input type="submit" value="홈으로 돌아가기">
+        </form>
+
+    {% else %}
+
+        {% for blog in blogs.all %}
+        <div class="container"> 
+            <div class="card">
+                <div class="card-body">
+                    <h1>{{ blog.title }}</h1>
+                    <p>{{ blog.pub_date | date:"Y-m-d" }}</p>
+                    <p>{{ blog.body }}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

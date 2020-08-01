@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>mypage</title>
+    <style>
+    @font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+    
+        .lead{
+            font-family: 'RIDIBatang';
+            text-align: right;
+            text-size-adjust: 50px;
+            margin-bottom: -8px;
+            margin-right: 300px;
+
+        }
+
+        .display-4 {
+            position: relative;
+            font-family: 'RIDIBatang';
+            text-align: right;
+            margin-right: 300px;
+        }
+
+        .btn {
+            position: absolute;
+            font-family: 'RIDIBatang';
+            margin-left: 700px;
+        }
+
+        .container{
+            margin-right: 100px;
+        }
+
+        .person{
+            position: absolute;
+            margin-left: 320px;
+            margin-top: 22px;
+        }
+
+    </style>
+  </head>
+
+<body>
+    <div class="jumbotron">
+        <span class="container">
+        <svg width="10em" height="10em" viewBox="0 0 16 16" class="person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+
+        <h1 class="display-4"> {{user.username}} 부자님 </h1>
+        <p class="lead">알바 이력이 나타납니다. </p>
+        <p class="lead">알바 이력이 나타납니다. </p>      
+        <p class="lead">알바 이력이 나타납니다. </p>   
+        </span>
+
+        <div>
+        <button type="button" class="btn"> 내 정보 수정하기 </button>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
+
+{% endblock %}

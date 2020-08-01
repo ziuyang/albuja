@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+body{
+   
+    margin:0;
+    font-family: 'RIDIBatang', sans-serif;  
+    background-color: white;  
+}
+section{
+    padding-top: 1em;
+}
+p{
+    font-size : 0.9em;
+    line-height: 1.6em;
+    font-family: 'RIDIBatang', sans-serif;
+}
+
+blockquote{
+    font-size : 0.7em;
+    line-height: 1.6em;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center
+}
+
+.logo{
+    width: 130px;
+}
+
+    
+
+header{
+    display: flex;
+    justify-content: flex-end;
+  
+}
+
+.menu{
+    width:25px;
+    margin-top :45%
+}
+
+.lion{
+    widows: 50%;
+    width: 80%
+}
+
+/*규원,예은 : 셀 부분 전체*/
+.project {
+    list-style-type: none;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+    margin : 50px;
+}
+
+
+/* 새로만듬 */
+.grid{
+    width: 500px;
+    margin:0 auto;
+    background-color: rgb(92, 192, 255);
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+.container_project {  /*container 랑 cell 을 막 섞어서 만든거라 이상할수도 있어요...*/
+    width: 100%;
+    margin:50px auto;
+    background-color: #E8F2F8;
+    color : black;
+    /*grid-column: 1;
+    grid-row: 2/3;*/
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px; 
+    text-align: left;
+    padding: 30px;
+}
+
+.date {         /*시간 - 오른쪽 정렬*/
+    font-size : 0.6em;
+    line-height: 0.5em;
+    font-family: 'RIDIBatang', sans-serif;
+    text-align: right;
+    font-weight : lighter;
+}
+
+.addition {
+    font-size : 0.7em;
+    line-height : 0.7em;
+    text-align: right;
+}
+.cell{
+    display : grid;
+    grid-gap : 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    /*grid-auto-rows: minmax(100px, auto);  */
+}
+
+li{
+    list-style-type: none;
+    /*height: 150px;*/
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+
+ .cell-1{
+    grid-column: 1;
+    grid-row: 1/2;   
+    color:black;
+    /* background-color:#FFDA8B;
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px; */
+} 
+
+.cell-2{
+    background-color: whitesmoke;
+    color: black;
+    grid-column: 1;
+    grid-row: 2/3;
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+
+.people{
+    width : 100px;
+}
+
+.cell-3{
+    background-color: #f2a42e;
+    grid-column: 1;
+    grid-row: 3/4; 
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+
+.cell-4{
+    background-color:#f07d4d;
+    grid-column: 1;
+    grid-row: 4/5; 
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+
+
+
+.cell-5{
+    background-color:#c25a40;
+    grid-column: 1;
+    grid-row: 5/6; 
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+
+.cell-6{
+    background-color: #9e442e;
+    grid-column: 1;
+    grid-row: 6/7; 
+    box-shadow: 5px 5px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+
+
+.container ul li:nth-child(n+3) blockquote{
+    font-size: 0.5em;
+}
+
+.container ul li a{
+    text-decoration: none;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 3em 0;
+    background: black;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    position: fixed;
+    width: 60%;
+    top:0;
+    right:0;
+    text-align: left;
+    background:rgb(36,41,44);
+    z-index: 7;
+    height: 100%;
+    padding-top: 3em;
+    font-size: 1em;
+    
+
+}
+
+
+
+/* 웹페이지에만 나타나는 CSS*/
+@media only screen and (min-width:650px){
+
+    blockquote{
+        font-size : 0.7em;
+        line-height: 1.6em;
+    }
+    .cell{
+        display : grid;
+        grid-gap : 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5,1fr);
+        margin-top: 0;
+    }
+
+
+    .cell-2{
+    
+        grid-column: 1 / 5;
+        grid-row: 1/2;
+        box-shadow: 5px 5px rgba(0,0,0,0.2); 
+        border-radius: 10px;
+    }
+
+    .cell-3{
+      
+        grid-column: 1/3;
+        grid-row: 2/4; 
+        box-shadow: 5px 5px rgba(0,0,0,0.2); 
+        border-radius: 10px;
+    }
+
+    .cell-4{
+   
+        grid-column: 3/5;
+        grid-row: 2/4; 
+        box-shadow: 5px 5px rgba(0,0,0,0.2); 
+        border-radius: 10px;
+    }
+
+    
+
+    .cell-5{
+        
+        grid-column: 1/ 3;
+        grid-row: 4/6; 
+        box-shadow: 5px 5px rgba(0,0,0,0.2); 
+        border-radius: 10px;
+    }
+
+    .cell-6{
+      
+        grid-column: 3/5;
+        grid-row: 4/6; 
+        box-shadow: 5px 5px rgba(0,0,0,0.2); 
+        border-radius: 10px;
+    }
+
+
+    .lion{
+        width: 50%;
+    }
+    .container{
+        width:70%;
+    }
+    .show-desktop{
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+
+    .hide-desktop{
+        display: none;
+    }
+    nav ul {
+        position : inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+        font-family: 'RIDIBatang', sans-serif;
+
+    }
+    
+    /*성경: 글씨 색깔/마우스오버시 색깔 바뀌게 설정*/
+
+    nav ul li{
+        float: left;
+    }
+    nav ul li a {
+        color: black;
+    }
+
+    nav ul li a:hover{
+        color: white;
+    }
+    
+    .cell a p{
+        color: black;
+        background-color: inhereit; 
+        
+    }   
+    .cell a p:hover {
+        color: white;
+    }
+}
+
+/* main 알바 후기 */
+
+h2,
+.card-title{
+    font-family: RIDIBatang;
+}
